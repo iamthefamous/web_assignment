@@ -1,0 +1,119 @@
+/* General body styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* The <header> containing the main title */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+}
+
+/* Main container for the page content */
+main {
+    max-width: 700px;
+    margin: 0 auto; /* Centers the main content horizontally */
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* General styles for all <section> elements inside <main> */
+section {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    /* Adds a line below each section, except for the last one */
+    border-bottom: 1px solid #ecf0f1;
+}
+
+main section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+section h2 {
+    color: #3498db;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Profile section specific styles */
+#profile {
+    display: flex; /* Aligns image and text side-by-side */
+    align-items: center; /* Vertically centers the items in the flex container */
+    gap: 25px; /* Creates space between the image and the text block */
+}
+
+#profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Prevents the image from being distorted */
+    border: 3px solid #3498db;
+}
+
+/* Social media list styles */
+#social-media ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0;
+}
+
+#social-media li {
+    display: inline-block; /* Displays links in a line instead of a block */
+    margin-right: 15px;
+}
+
+#social-media a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+#social-media a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* Contact form styles */
+#contact form {
+    display: grid;
+    gap: 15px; /* Space between form elements */
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input[type="text"],
+#contact input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+}
+
+#contact button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-self: start; /* Aligns the button to the start of the grid cell */
+}
+
+#contact button:hover {
+    background-color: #2980b9;
+}
