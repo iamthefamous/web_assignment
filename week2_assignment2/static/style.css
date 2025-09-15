@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #00d4ff;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.section {
+    background-color: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.section h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    color: #00d4ff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    max-width: 100%;
+}
+
+.assignment-card {
+    background-color: #0f3460;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #ffffff;
+    transition: transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.assignment-card:hover {
+    transform: scale(1.05);
+    background-color: #1e4a7a;
+}
+
+footer {
+    margin-top: 20px;
+    max-width: 1000px;        /* To align with the sections above */
+    width: 100%;
+    box-sizing: border-box;   /* To ensure padding is included in the width */
+}
+
+footer h1 {
+    background-color: #388be3; /* A lighter blue from your theme */
+    border-radius: 8px;       /* For the "rounded" effect */
+    padding: 12px 20px;
+    font-size: 1.2em; /* A bit larger, but not overwhelming */
+    font-weight: 500; /* Less bold than a default h1 */
+    color: #ffffff;
+    margin: 0;
+    display: inline-block;    /* Makes the box wrap the content */
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}

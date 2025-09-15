@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Assignments</h1>
+        <p>Summary: 3 sections + 20 links per section (grid 5 x 4) = Total 60 links</p>
+    </div>
+
+    <div class="section">
+        <h2>Section 1</h2>
+        <div class="grid-container" id="section1"></div>
+    </div>
+
+    <div class="section">
+        <h2>Section 2</h2>
+        <div class="grid-container" id="section2"></div>
+    </div>
+
+    <div class="section">
+        <h2>Section 3</h2>
+        <div class="grid-container" id="section3"></div>
+    </div>
+
+    <script>
+        // Function to populate a grid container with assignment cards
+        function populateGrid(containerId, startIndex) {
+            const gridContainer = document.getElementById(containerId);
+            for (let i = 1; i <= 20; i++) {
+                const assignmentNumber = startIndex + i;
+                const card = document.createElement('a');
+                card.className = 'assignment-card';
+                card.textContent = `Assignment ${assignmentNumber}`;
+                card.href = `assignments/${assignmentNumber}/index.html`;
+                gridContainer.appendChild(card);
+            }
+        }
+
+        // Populate each section
+        populateGrid('section1', 0);  // Assignments 1-20
+        populateGrid('section2', 20); // Assignments 21-40
+        populateGrid('section3', 40); // Assignments 41-60
+    </script>
+    <footer><h1>Student name: Asylbek Zhunusov</h1></footer>
+</body>
+</html>
